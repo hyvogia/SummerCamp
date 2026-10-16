@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyVo_Proj1SummerCampXF.CamperDetailsPage"
+             Title="Details of Camper">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView x:Name="CamperScrollView" Orientation="Vertical" VerticalOptions="FillAndExpand" >
+            <StackLayout Orientation="Vertical"  VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFF" Margin="20,5,20,5" Padding="15,10,15,10">
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="First Name" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtFName" Text="{Binding FirstName}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Middle Name" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtMName" Text="{Binding MiddleName}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Last Name" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtLName" Text="{Binding LastName}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Data of Birth" WidthRequest="120"  VerticalOptions="Center" />
+                        <DatePicker x:Name="daDOB" Date="{Binding DOB}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Gender" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtGender" Text="{Binding Gender}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="EMail" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtEmail" Text="{Binding EMail}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Phone" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtPhone" Text="{Binding Phone}" Style="{StaticResource editEntry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,20" Padding="{StaticResource T20W}">
+                        <Picker x:Name="ddlCompounds" Title="Compound" Style="{StaticResource editEntry}" ItemDisplayBinding="{Binding Name}"  VerticalOptions="Center">
+                        </Picker>
+                    </StackLayout>
+
+                    <Button Text="Save" Clicked="SaveClicked" Style="{StaticResource ListButton}"/>
+                    <Button Text="Cancel" Clicked="CancelClicked" Style="{StaticResource ListButton}"/>
+                    <Button x:Name="btnDelete" Text="Delete" Clicked="DeleteClicked" Style="{StaticResource ListButton}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

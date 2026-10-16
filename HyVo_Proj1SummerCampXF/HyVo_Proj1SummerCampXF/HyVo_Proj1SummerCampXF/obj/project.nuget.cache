@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "w9eZ2z5T4m7u0j5FJgSrdp5xSK3rq0U2gI/7Gt0OdvRu6YOJNE1gCHWfGJG0vNkt4+e3Hk3PMa8iL3Qh8hWmaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vogia\\Documents\\GitHub\\SummerCamp\\HyVo_Proj1SummerCampXF\\HyVo_Proj1SummerCampXF\\HyVo_Proj1SummerCampXF\\HyVo_Proj1SummerCampXF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vogia\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.13\\microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512"
+  ],
+  "logs": []
+}

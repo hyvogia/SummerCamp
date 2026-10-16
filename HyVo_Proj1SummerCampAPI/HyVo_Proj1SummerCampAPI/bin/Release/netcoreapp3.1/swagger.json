@@ -1,0 +1,411 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "HyVo_Proj1SummerCampAPI",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Campers": {
+      "get": {
+        "tags": [
+          "Campers"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CamperDTO"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Campers"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CamperDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/CamperDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Campers/{id}": {
+      "get": {
+        "tags": [
+          "Campers"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/CamperDTO"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Campers"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CamperDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Campers"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Campers/ByCompound/{id}": {
+      "get": {
+        "tags": [
+          "Campers"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CamperDTO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Compounds": {
+      "get": {
+        "tags": [
+          "Compounds"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CompoundDTO"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Compounds"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CompoundDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/CompoundDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Compounds/{id}": {
+      "get": {
+        "tags": [
+          "Compounds"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/CompoundDTO"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Compounds"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CompoundDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Compounds"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CompoundDTO": {
+      "required": [
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "rowVersion": {
+          "format": "byte",
+          "type": "string"
+        },
+        "campers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CamperDTO"
+          }
+        }
+      }
+    },
+    "CamperDTO": {
+      "required": [
+        "compoundID",
+        "dob",
+        "eMail",
+        "firstName",
+        "gender",
+        "lastName",
+        "phone"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "age": {
+          "type": "string",
+          "readOnly": true
+        },
+        "firstName": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "middleName": {
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "lastName": {
+          "maxLength": 100,
+          "minLength": 0,
+          "type": "string"
+        },
+        "dob": {
+          "format": "date",
+          "type": "string"
+        },
+        "gender": {
+          "maxLength": 1,
+          "minLength": 0,
+          "pattern": "^\\{|M|F|N|T|O|}$",
+          "type": "string"
+        },
+        "eMail": {
+          "format": "email",
+          "maxLength": 255,
+          "minLength": 0,
+          "type": "string"
+        },
+        "phone": {
+          "format": "tel",
+          "maxLength": 10,
+          "minLength": 0,
+          "pattern": "^\\d{10}$",
+          "type": "string"
+        },
+        "rowVersion": {
+          "format": "byte",
+          "type": "string"
+        },
+        "compoundID": {
+          "format": "int32",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "compound": {
+          "$ref": "#/definitions/CompoundDTO"
+        }
+      }
+    }
+  }
+}

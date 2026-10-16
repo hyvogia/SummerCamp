@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyVo_Proj1SummerCampXF.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- DEFAULT Styling -->
+
+            <!-- Static Linked Values -->
+            <OnPlatform x:Key="SizeTiny" x:TypeArguments="x:String" Android="15" WinPhone="15" iOS="15" />
+            <OnPlatform x:Key="SizeSmall" x:TypeArguments="x:String" Android="18" WinPhone="18" iOS="18" />
+            <OnPlatform x:Key="SizeMed" x:TypeArguments="x:String" Android="21" WinPhone="21" iOS="21" />
+            <OnPlatform x:Key="SizeLarge" x:TypeArguments="x:String" Android="24" WinPhone="24" iOS="24" />
+            <OnPlatform x:Key="SizeXL" x:TypeArguments="x:String" Android="27" WinPhone="27" iOS="27" />
+            <OnPlatform x:Key="ColourWhite" x:TypeArguments="Color" Android="#fff" WinPhone="#fff" iOS="#fff" />
+            <OnPlatform x:Key="ColourBlack" x:TypeArguments="Color" Android="#000" WinPhone="#000" iOS="#000" />
+            <OnPlatform x:Key="ColourOrange" x:TypeArguments="Color" Android="#FF5722" WinPhone="#FF5722" iOS="#FF5722" />
+            <OnPlatform x:Key="ColourOrange2" x:TypeArguments="Color" Android="#FF3D00" WinPhone="#FF3D00" iOS="#FF3D00" />
+            <OnPlatform x:Key="ColourOrange3" x:TypeArguments="Color" Android="#DD2C00" WinPhone="#DD2C00" iOS="#DD2C00" />
+            <OnPlatform x:Key="ColourPurple" x:TypeArguments="Color" Android="#9B26AF" WinPhone="#9B26AF" iOS="#9B26AF" />
+            <OnPlatform x:Key="ColourPurple2" x:TypeArguments="Color" Android="#7A1EA1" WinPhone="#7A1EA1" iOS="#7A1EA1" />
+            <OnPlatform x:Key="ColourPurple3" x:TypeArguments="Color" Android="#691A99" WinPhone="#691A99" iOS="#691A99" />
+            <OnPlatform x:Key="ColourTeal" x:TypeArguments="Color" Android="#008080" WinPhone="#008080" iOS="#008080" />
+            <OnPlatform x:Key="ColourGreen" x:TypeArguments="Color" Android="#68EFAD" WinPhone="#68EFAD" iOS="#68EFAD" />
+            <OnPlatform x:Key="ColourBlue" x:TypeArguments="Color" Android="#3392b5" WinPhone="#3392b5" iOS="#3392b5" />
+            <OnPlatform x:Key="EditColour" x:TypeArguments="Color" Android="#000" WinPhone="#000" iOS="#000" />
+            <OnPlatform x:Key="BtnTxtColor" x:TypeArguments="Color" Android="#fff" WinPhone="#fff" iOS="#fff" />
+            <OnPlatform x:Key="BtnBgColor" x:TypeArguments="Color" Android="#3392b5" WinPhone="#3392b5" iOS="#3392b5" />
+
+            <OnPlatform x:Key="PaddingTop" x:TypeArguments="Thickness" Android="10,10,10,20" WinPhone="10,10,10,20" iOS="10,10,10,20" />
+            <OnPlatform x:Key="PaddingBot" x:TypeArguments="Thickness" Android="10,10,10,0" WinPhone="10,10,10,0" iOS="10,10,10,0" />
+            <OnPlatform x:Key="T10" x:TypeArguments="Thickness" Android="10,10,10,10" WinPhone="10,10,10,10" iOS="10,10,10,10" />
+            <OnPlatform x:Key="T20" x:TypeArguments="Thickness" Android="20,20,20,20" WinPhone="20,20,20,20" iOS="20,20,20,20" />
+            <OnPlatform x:Key="T20W" x:TypeArguments="Thickness" Android="20,0,20,0" WinPhone="20,0,20,0" iOS="20,0,20,0" />
+            <OnPlatform x:Key="T10W" x:TypeArguments="Thickness" Android="10,0,10,0" WinPhone="10,0,10,0" iOS="10,0,10,0" />
+            <OnPlatform x:Key="T5T" x:TypeArguments="Thickness" Android="0,5,0,0" WinPhone="0,5,0,0" iOS="0,5,0,0" />
+
+            <!--Item Styling-->
+            <Style x:Key="AboutImage" TargetType="Image">
+                <Setter Property="Source" Value="ryanmorris.png"/>
+                <Setter Property="HeightRequest" Value="400"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="editEntry" TargetType="Entry">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+
+            <!--List Styling-->
+            <Style x:Key="ListViewHeader" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColourOrange}"/>
+                <Setter Property="Padding" Value="{StaticResource T20}"/>
+            </Style>
+
+            <Style x:Key="ListButton" TargetType="Button">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ColourBlue}"/>
+                <Setter Property="BorderColor" Value="{StaticResource ColourBlue}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="{StaticResource T10W}"/>
+            </Style>
+
+            <Style x:Key="Text" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SizeMed}"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+
+            <Style x:Key="TitleText" TargetType="Label" BasedOn="{StaticResource Text}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+
+            <Style x:Key="Header" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColourOrange}"/>
+            </Style>
+
+            <Style x:Key="titleText" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SizeXL}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#fff"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+
+            <Style x:Key="titleBlkText" TargetType="Label"  BasedOn="{StaticResource titleText}">
+                <Setter Property="TextColor" Value="#111"/>
+            </Style>
+
+            <!--Footer Style-->
+            <Style x:Key="footerContainer" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ColourWhite}"/>
+                <Setter Property="Padding" Value="5,5,5,5"/>
+            </Style>
+
+            <Style x:Key="footerButton" TargetType="Button">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ColourOrange}"/>
+                <Setter Property="BorderColor" Value="{StaticResource ColourOrange}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="#FFF"/>
+            </Style>
+
+            <OnPlatform x:Key="footerText" x:TypeArguments="x:String" Android="Collection" WinPhone="Collection" iOS="Collection" />
+            <OnPlatform x:Key="footerTextAbout" x:TypeArguments="x:String" Android="Settings" WinPhone="Settings" iOS="Settings" />
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
